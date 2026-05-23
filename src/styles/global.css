@@ -1,7 +1,19 @@
-/* تم لایت (پیش‌فرض) */
+/* reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* light theme (default) */
 :root,
 [data-theme="light"] {
-  --color-primary: #0070f3;      /* رنگ اصلی خودت را بگذار */
+  --color-primary: #0070f3;
   --color-secondary: #ff4081;
   --color-danger: #ef4444;
   --color-background: #ffffff;
@@ -26,7 +38,7 @@
   --radius-full: 9999px;
 }
 
-/* تم دارک */
+/* dark theme */
 [data-theme="dark"] {
   --color-primary: #3b82f6;
   --color-secondary: #f472b6;

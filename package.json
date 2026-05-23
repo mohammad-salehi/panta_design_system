@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "tsup && npm run copy-styles",
-    "copy-styles": "shx cp src/styles/index.css dist/styles.css",
+    "copy-styles": "shx cp src/styles/global.css dist/styles.css",
     "prepublishOnly": "npm run build",
     "dev": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
