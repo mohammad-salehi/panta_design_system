@@ -7,9 +7,9 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./styles.css": "./dist/styles.css"
   },
@@ -19,12 +19,17 @@
   ],
   "scripts": {
     "build": "tsup && npm run copy-styles",
-    "copy-styles": "cp src/styles/index.css dist/styles.css",
+    "copy-styles": "shx cp src/styles/index.css dist/styles.css",
     "prepublishOnly": "npm run build",
     "dev": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["design-system", "nextjs", "dark-mode", "react"],
+  "keywords": [
+    "design-system",
+    "nextjs",
+    "dark-mode",
+    "react"
+  ],
   "author": "",
   "license": "MIT",
   "peerDependencies": {
@@ -39,6 +44,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^10.4.0",
     "prettier": "^3.8.3",
+    "shx": "^0.4.0",
     "tsup": "^8.5.1",
     "typescript": "^5.0.0"
   }
